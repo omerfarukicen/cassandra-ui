@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="555.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.github.omerfarukicen.cassandraui.ui.MainController">
+    <children>
+        <MenuBar fx:id="menu" prefHeight="29.0" prefWidth="876.0" AnchorPane.bottomAnchor="30.0"
+                 AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <SplitPane fx:id="mainWindow" dividerPositions="0.29797979797979796" layoutX="-3.0" layoutY="27.0" prefHeight="528.0"
+                   prefWidth="876.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="597.0">
+                    <children>
+                        <SplitPane dividerPositions="0.07485604606525911" orientation="VERTICAL" pickOnBounds="false"
+                                   prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0"
+                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane maxHeight="35.0" minHeight="35.0" minWidth="0.0" prefHeight="35.0"
+                                            prefWidth="160.0">
+                                    <children>
+                                        <GridPane prefHeight="25.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                                  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                  AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0"/>
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"
+                                                                   maxWidth="100.0" minWidth="100.0" prefWidth="100.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0"
+                                                                valignment="CENTER" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <TextField fx:id="queryTextField">
+                                                    <GridPane.margin>
+                                                        <Insets left="10.0" right="10.0"/>
+                                                    </GridPane.margin>
+                                                </TextField>
+                                                <Button fx:id="runButton" maxWidth="90.0" minWidth="90.0"
+                                                        mnemonicParsing="false" prefWidth="90.0" text="Run query"
+                                                        GridPane.columnIndex="1"/>
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                    <children>
+                                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0"
+                                                   prefWidth="160.0" AnchorPane.bottomAnchor="0.0"
+                                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                   AnchorPane.topAnchor="0.0">
+                                            <items>
+                                                <AnchorPane fx:id="editorAnchor" minHeight="0.0" minWidth="0.0"
+                                                            prefHeight="100.0" prefWidth="160.0">
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="eventAnchor" maxHeight="40.0" minHeight="40.0"
+                                                            minWidth="0.0" prefHeight="40.0" prefWidth="160.0"
+                                                            SplitPane.resizableWithParent="false"/>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
